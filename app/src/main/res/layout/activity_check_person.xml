@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CheckPersonActivity">
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar1"
+            app:title="Проверка водителя"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
+    <EditText android:layout_width="0dp"
+              app:layout_constraintTop_toBottomOf="@id/toolbar1"
+              android:layout_height="56dp"
+              android:hint="ИИН водителя"
+              android:layout_marginTop="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginStart="8dp"
+              android:id="@+id/poiskText"
+              app:layout_constraintEnd_toStartOf="@id/poisk"
+              app:layout_constraintStart_toStartOf="parent"
+
+    />
+    <ImageButton android:layout_width="56dp"
+                 android:layout_height="56dp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 android:id="@+id/poisk"
+                 android:src="@drawable/ic_search_black_24dp"
+                 android:background="@color/colorPrimary"
+                 android:layout_marginEnd="8dp"
+                 app:layout_constraintTop_toTopOf="@id/poiskText"/>
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/poisk"
+                app:layout_constraintBottom_toBottomOf="parent"
+    >
+
+      <android.support.constraint.ConstraintLayout
+              android:id="@+id/personLayout"
+              android:visibility="gone"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+          <ImageView android:layout_width="141dp"
+                     android:layout_height="183dp"
+                     android:src="@drawable/voditel"
+                     android:id="@+id/photo"
+                     app:layout_constraintStart_toStartOf="parent"
+                     android:layout_marginStart="8dp"
+          />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/photo"
+                    android:id="@+id/surnameTitle"
+                    android:textSize="18sp"
+                    android:text="Фамилия:"/>
+          <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/surnameTitle"
+                    android:layout_marginStart="8dp"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:text="Иванов"
+          />
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintStart_toEndOf="@id/photo"
+                  app:layout_constraintTop_toBottomOf="@id/surnameTitle"
+                  android:id="@+id/nameTitle"
+                  android:textSize="18sp"
+                  android:text="Имя:"/>
+          <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/nameTitle"
+                    app:layout_constraintTop_toTopOf="@id/nameTitle"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="Иван"
+          />
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintStart_toEndOf="@id/photo"
+                  app:layout_constraintTop_toBottomOf="@id/nameTitle"
+                  android:id="@+id/middleTitle"
+                  android:textSize="18sp"
+                  android:text="Отчество:"/>
+          <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/middleTitle"
+                    app:layout_constraintTop_toTopOf="@id/middleTitle"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="Иванович"
+          />
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              app:layout_constraintStart_toEndOf="@id/photo"
+              app:layout_constraintTop_toBottomOf="@id/middleTitle"
+              android:id="@+id/dateTitle"
+              android:textSize="18sp"
+              android:text="Дата рождения:"/>
+          <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/dateTitle"
+                    app:layout_constraintTop_toTopOf="@id/dateTitle"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="10.11.1953"
+          />
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintStart_toEndOf="@id/photo"
+                  app:layout_constraintTop_toBottomOf="@id/dateTitle"
+                  android:id="@+id/iinTitle"
+                  android:textSize="18sp"
+                  android:text="ИИН:"/>
+          <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/iinTitle"
+                    app:layout_constraintTop_toTopOf="@id/iinTitle"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="9830405002356"
+          />
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintStart_toEndOf="@id/photo"
+                  app:layout_constraintTop_toBottomOf="@id/iinTitle"
+                  android:id="@+id/nationTitle"
+                  android:textSize="18sp"
+                  android:text="Национальность:"/>
+          <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/nationTitle"
+                    app:layout_constraintTop_toTopOf="@id/nationTitle"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="аккулак"
+          />
+          <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  app:layout_constraintStart_toEndOf="@id/photo"
+                  app:layout_constraintTop_toBottomOf="@id/nationTitle"
+                  android:id="@+id/srokTitle"
+                  android:textSize="18sp"
+                  android:text="Cрок действия:"/>
+          <TextView android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/srokTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/srokTitle"
+                    android:layout_marginStart="8dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="10.11.2016- 10.11.2020"
+          />
+          <Button android:layout_width="match_parent"
+                  android:layout_height="56dp"
+                  app:layout_constraintTop_toBottomOf="@id/photo"
+                  android:layout_marginTop="16dp"
+                  android:id="@+id/shtrafi"
+                  android:text="Штрафы"
+                  android:drawableEnd="@drawable/ic_add_circle_black_24dp"
+          />
+          <Button android:layout_width="match_parent"
+                  android:layout_height="56dp"
+                  app:layout_constraintTop_toBottomOf="@id/shtrafLayout"
+                  android:id="@+id/nalog"
+                  android:text="Налог"
+                  android:drawableEnd="@drawable/ic_add_circle_black_24dp"
+          />
+          <android.support.constraint.ConstraintLayout
+                  android:visibility="gone"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/shtrafLayout"
+                  app:layout_constraintTop_toBottomOf="@id/shtrafi"
+          >
+              <android.support.v7.widget.CardView
+                      android:layout_width="0dp"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_marginStart="16dp"
+                      android:id="@+id/card1"
+                      android:layout_marginEnd="16dp"
+                      android:layout_height="wrap_content">
+                  <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                               android:layout_height="match_parent">
+                      <TextView
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toTopOf="parent"
+                              android:id="@+id/nomer"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:text="№ штрафа:"
+                      />
+                      <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4364425"
+                                android:textColor="#000"
+                                app:layout_constraintTop_toTopOf="@id/nomer"
+                                app:layout_constraintStart_toEndOf="@id/nomer"
+                                android:layout_marginStart="16dp"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                      />
+                      <TextView
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toBottomOf="@id/nomer"
+                              android:id="@+id/dateShtraf"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:text= "Дата получение:"
+                      />
+                      <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10.12.2018"
+                                android:textColor="#000"
+                                app:layout_constraintTop_toTopOf="@id/dateShtraf"
+                                app:layout_constraintStart_toEndOf="@id/dateShtraf"
+                                android:layout_marginStart="16dp"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                      />
+                      <TextView
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toBottomOf="@id/dateShtraf"
+                              android:id="@+id/summaShtraf"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:text= "Сумма штрафа:"
+                      />
+                      <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="16 998 тенге"
+                                android:textColor="#000"
+                                app:layout_constraintTop_toTopOf="@id/summaShtraf"
+                                app:layout_constraintStart_toEndOf="@id/summaShtraf"
+                                android:layout_marginStart="16dp"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                      />
+                  </android.support.constraint.ConstraintLayout>
+
+              </android.support.v7.widget.CardView>
+              <android.support.v7.widget.CardView
+                      android:layout_width="0dp"
+                      android:layout_marginTop="8dp"
+                      app:layout_constraintTop_toBottomOf="@id/card1"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      android:layout_marginStart="16dp"
+                      android:layout_marginEnd="16dp"
+                      android:layout_height="wrap_content">
+                  <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                               android:layout_height="match_parent">
+                      <TextView
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toTopOf="parent"
+                              android:id="@+id/nomer1"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:text="№ штрафа:"
+                      />
+                      <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4364425"
+                                android:textColor="#000"
+                                app:layout_constraintTop_toTopOf="@id/nomer1"
+                                app:layout_constraintStart_toEndOf="@id/nomer1"
+                                android:layout_marginStart="16dp"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                      />
+                      <TextView
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toBottomOf="@id/nomer1"
+                              android:id="@+id/dateShtraf1"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:text= "Дата получение:"
+                      />
+                      <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10.12.2018"
+                                android:textColor="#000"
+                                app:layout_constraintTop_toTopOf="@id/dateShtraf1"
+                                app:layout_constraintStart_toEndOf="@id/dateShtraf1"
+                                android:layout_marginStart="16dp"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                      />
+                      <TextView
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toBottomOf="@id/dateShtraf1"
+                              android:id="@+id/summaShtraf1"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginTop="8dp"
+                              android:textSize="18sp"
+                              android:text= "Сумма штрафа:"
+                      />
+                      <TextView android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="16 998 тенге"
+                                android:textColor="#000"
+                                app:layout_constraintTop_toTopOf="@id/summaShtraf1"
+                                app:layout_constraintStart_toEndOf="@id/summaShtraf1"
+                                android:layout_marginStart="16dp"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                      />
+                  </android.support.constraint.ConstraintLayout>
+
+              </android.support.v7.widget.CardView>
+          </android.support.constraint.ConstraintLayout>
+      </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
